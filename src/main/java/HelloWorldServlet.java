@@ -19,7 +19,6 @@ public class HelloWorldServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-        hitCount++;
         PrintWriter out = response.getWriter();
 
         String name = request.getParameter("Name");
@@ -43,10 +42,7 @@ public class HelloWorldServlet extends HttpServlet {
 
 
 
-
-
-
-
+        hitCount++;
         String title = "Total Number of Hits";
         String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + "transitional//en\">\n";
         out.println(docType +
