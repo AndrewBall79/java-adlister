@@ -59,8 +59,5 @@ public class HelloWorldServlet extends HttpServlet {
         doGet(req, res);
 
     }
-    public void destroy() {
-        // This is optional step but if you like you
-        // can write hitCount value in your database.
-    }
 }
+

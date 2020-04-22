@@ -3,10 +3,19 @@
 <html>
 <head>
     <title>Login</title>
+<%--    <link rel="stylesheet" type="text/css" href="<c:url value="/partials/head.jsp" />" >--%>
+    <link rel="stylesheet"  href="${pageContext.request.contextPath}/partials/head.jsp" >
+<%--    <style type="text/css">--%>
+<%--        body {--%>
+<%--            background: blue;--%>
+<%--        }--%>
+<%--    </style>--%>
 </head>
 <body>
 <div>
 <%-- form to get email and password --%>
+
+    <h1>1. Test CSS</h1>
 <form method="POST" action="/login.jsp">
         <label for="Username">Username:</label>
         <input id="Username" name="Username" placeholder="Enter your Username" />
