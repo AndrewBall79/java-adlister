@@ -8,9 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+
     <jsp:include page="../partials/head.jsp">
         <jsp:param name="title" value="Product Show Page"/>
     </jsp:include>
+
 </head>
 <body>
  <!-- This is where the content for the Product Show page will go -->
