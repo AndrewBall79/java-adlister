@@ -3,15 +3,18 @@
 <html>
 <head>
     <jsp:include page="../partials/head.jsp">
-        <jsp:param name="title" value="Welcome to my site!" />
+        <jsp:param name="title" value="View Our Ads" />
     </jsp:include>
 </head>
 <body>
 
-
-<jsp:include page="../partials/head.jsp" />
+<%--loop through the array of ads--%>
 <div class="container">
-    <h1>Welcome to the Adlister!</h1>
+<c:forEach var="ad" items="${allTheAds}">
+    <h1><c:out value="${ad.title}" /></h1>
+    <p><c:out value="${ad.description}"/></p>
+</c:forEach>
+
 </div>
 </body>
 </html>
