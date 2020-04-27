@@ -5,8 +5,10 @@
             <a class="navbar-brand" href="/ads">Adlister</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
+<%--            //log in brings you to the login page--%>
             <li><a href="/login">Login</a></li>
-            <li><a href="/logout">Logout</a></li>
+<%--            //log out also brings you to the login page--%>
+            <li><a href="/login">Logout</a></li>
 
         </ul>
     </div><!-- /.navbar-collapse -->

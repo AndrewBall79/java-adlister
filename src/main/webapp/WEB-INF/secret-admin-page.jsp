@@ -9,8 +9,12 @@
 <html>
 <head>
     <title>Secret Admin Page</title>
+    <jsp:include page="../partials/head.jsp">
+        <jsp:param name="title" value="Your Profile" />
+    </jsp:include>
 </head>
 <body>
+<jsp:include page="../partials/navbar.jsp" />
 
 <h1>Secret Admin Page</h1>
 
