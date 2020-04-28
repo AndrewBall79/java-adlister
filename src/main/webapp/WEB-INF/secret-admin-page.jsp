@@ -17,7 +17,7 @@
 <jsp:include page="../partials/navbar.jsp" />
 
 <h1>Secret Admin Page</h1>
-<p>Hello, ${UserName}</p>
+<h3>Hello, ${name}</h3>
 
 
 

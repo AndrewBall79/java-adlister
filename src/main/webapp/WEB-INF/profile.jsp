@@ -9,7 +9,7 @@
     <jsp:include page="../partials/navbar.jsp" />
 
     <div class="container">
-        <h1>Viewing your profile ${UserName}</h1>
+        <h1>Viewing your profile ${name}</h1>
     </div>
 
 </body>

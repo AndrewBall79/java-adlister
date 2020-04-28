@@ -6,15 +6,15 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(name = "ViewAdminProfileServlet", urlPatterns = "/secret-admin-page")
+@WebServlet("/secret-admin-page")
 public class ViewAdminProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String name;
-        HttpSession session = request.getSession();
-        name = "AdminAddy";
-        request.setAttribute("name", name);
-        request.getRequestDispatcher("/WEB-INF/secret-admin-page.jsp").forward(request, response);
-        System.out.println(name);
+        // redirect if the user is not an admin
 
+        if (request.getSession().getAttribute("isAdmin") == "false") {
+            response.sendRedirect("/login");
+        } else {
+            request.getRequestDispatcher("/WEB-INF/secret-admin-page.jsp").forward(request, response);
+        }
     }
-}
+    }

@@ -6,13 +6,15 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(name = "LogOutServlet", urlPatterns = "/logout")
+@WebServlet("/logout")
 public class LogOutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("WEB-INF/logout.jsp").forward(request, response);
+        HttpSession session = request.getSession();
+        session.removeAttribute("isAdmin");
+        session.removeAttribute("user");
+        response.sendRedirect("/login");
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.getSession().invalidate();
-        request.getSession().removeAttribute("isAdmin");
     }
 }
