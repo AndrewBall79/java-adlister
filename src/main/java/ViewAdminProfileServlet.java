@@ -9,8 +9,12 @@ import java.io.IOException;
 @WebServlet(name = "ViewAdminProfileServlet", urlPatterns = "/secret-admin-page")
 public class ViewAdminProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name;
         HttpSession session = request.getSession();
-        String UserName = (String) session.getAttribute("name");
+        name = "AdminAddy";
+        request.setAttribute("name", name);
         request.getRequestDispatcher("/WEB-INF/secret-admin-page.jsp").forward(request, response);
+        System.out.println(name);
+
     }
 }
