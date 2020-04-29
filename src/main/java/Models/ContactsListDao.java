@@ -1,3 +1,5 @@
+package Models;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,5 +54,4 @@ public class ContactsListDao implements Contacts {
             System.out.println(contact.getFirstName());
         }
     }
-
 }

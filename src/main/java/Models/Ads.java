@@ -1,3 +1,7 @@
+package Models;
+
+import Models.Ad;
+
 import java.util.List;
 
 public interface Ads {

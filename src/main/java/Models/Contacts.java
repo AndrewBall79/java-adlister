@@ -1,9 +1,9 @@
-//INTERFACE FOR OUR CONTACT BEAN
+package Models;//INTERFACE FOR OUR CONTACT BEAN
 
 import java.util.List;
 
 public interface Contacts {
-    // List all the contacts (List<Contact>)
+    // List all the contacts (List<Models.Contact>)
     List<Contact> getContacts();
 
     // method for saving contact
