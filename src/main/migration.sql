@@ -1,7 +1,7 @@
 use adlister_db;
 
 CREATE TABLE users (
-    id LONG NOT NULL AUTO_INCREMENT,
+    id INT NOT NULL AUTO_INCREMENT,
     username VARCHAR(50) DEFAULT 'NONE',
     email VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE ads(
-        id LONG NOT NULL AUTO_INCREMENT,
+        id INT NOT NULL AUTO_INCREMENT,
         user_id INT,
         FOREIGN KEY (user_id) references adlister_db.users(id),
         title VARCHAR(50) DEFAULT 'NONE',
