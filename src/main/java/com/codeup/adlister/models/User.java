@@ -1,5 +1,7 @@
 package com.codeup.adlister.models;
 
+import Models.Config;
+
 public class User {
     private long id;
     private String username;
@@ -13,6 +15,12 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
+    }
+
+    public User(String username, String email, String password) {
+    }
+
+    public User(Config config) {
     }
 
     public long getId() {
